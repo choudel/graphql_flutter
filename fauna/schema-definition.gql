@@ -1,0 +1,20 @@
+type Mutation{
+    createUser(data:CreatuserInput!):String! @resolver(name:"create_user")login(data: LoginUserInput!):String! @resolver(name:"login_user")
+}
+input CreatuserInput{
+username: String!
+password: String!
+}
+input LoginUserInput{
+username: String!
+password: String!
+}
+type Community{
+name:String!
+purpose:String
+icon:String
+}
+type User{
+username:String! @unique
+
+}
